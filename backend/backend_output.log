@@ -1,0 +1,106 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.polling:backend >-------------------------
+[INFO] Building PollingSystem 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.3:run (default-cli) > test-compile @ backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ backend ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ backend ---
+[INFO] skip non existing resourceDirectory /Users/rajkumarbhol/Desktop/Antigravity/Polling System/backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.3:run (default-cli) < test-compile @ backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.3:run (default-cli) @ backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.3)
+
+2026-02-22T13:58:55.760+05:30  INFO 5677 --- [PollingSystem] [           main] c.p.backend.PollingSystemApplication     : Starting PollingSystemApplication using Java 25.0.2 with PID 5677 (/Users/rajkumarbhol/Desktop/Antigravity/Polling System/backend/target/classes started by rajkumarbhol in /Users/rajkumarbhol/Desktop/Antigravity/Polling System/backend)
+2026-02-22T13:58:55.760+05:30  INFO 5677 --- [PollingSystem] [           main] c.p.backend.PollingSystemApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-02-22T13:58:55.940+05:30  INFO 5677 --- [PollingSystem] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-22T13:58:55.959+05:30  INFO 5677 --- [PollingSystem] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/rajkumarbhol/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.36/tomcat-embed-core-10.1.36.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-02-22T13:58:56.121+05:30  INFO 5677 --- [PollingSystem] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-22T13:58:56.125+05:30  INFO 5677 --- [PollingSystem] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-22T13:58:56.126+05:30  INFO 5677 --- [PollingSystem] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-02-22T13:58:56.151+05:30  INFO 5677 --- [PollingSystem] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-22T13:58:56.152+05:30  INFO 5677 --- [PollingSystem] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 376 ms
+2026-02-22T13:58:56.207+05:30  INFO 5677 --- [PollingSystem] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-22T13:58:56.219+05:30  INFO 5677 --- [PollingSystem] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-02-22T13:58:56.226+05:30  INFO 5677 --- [PollingSystem] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-22T13:58:56.296+05:30  INFO 5677 --- [PollingSystem] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-22T13:58:56.305+05:30  INFO 5677 --- [PollingSystem] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-22T13:58:56.353+05:30  INFO 5677 --- [PollingSystem] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:polling_db user=SA
+2026-02-22T13:58:56.354+05:30  INFO 5677 --- [PollingSystem] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-22T13:58:56.359+05:30  WARN 5677 --- [PollingSystem] [           main] org.hibernate.dialect.Dialect            : HHH000511: The 2.3.232 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2026-02-22T13:58:56.360+05:30  WARN 5677 --- [PollingSystem] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-22T13:58:56.365+05:30  INFO 5677 --- [PollingSystem] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-22T13:58:56.610+05:30  INFO 5677 --- [PollingSystem] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: create table options (id bigint generated by default as identity, option_text varchar(255) not null, vote_count integer not null, poll_id bigint not null, primary key (id))
+Hibernate: create table polls (id bigint generated by default as identity, created_at timestamp(6), expiry_date timestamp(6), status varchar(255) check (status in ('ACTIVE','CLOSED')), title varchar(255) not null, created_by bigint not null, primary key (id))
+Hibernate: create table users (id bigint generated by default as identity, email varchar(255) not null, name varchar(255) not null, password varchar(255) not null, role varchar(255) check (role in ('ROLE_USER','ROLE_ADMIN')), primary key (id))
+Hibernate: create table votes (id bigint generated by default as identity, option_id bigint not null, poll_id bigint not null, user_id bigint not null, primary key (id))
+Hibernate: alter table if exists users drop constraint if exists UK6dotkott2kjsp8vw4d0m25fb7
+Hibernate: alter table if exists users add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: alter table if exists votes drop constraint if exists UK8um9h2wxsdjrgx3rjjwvny676
+Hibernate: alter table if exists votes add constraint UK8um9h2wxsdjrgx3rjjwvny676 unique (user_id, poll_id)
+Hibernate: alter table if exists options add constraint FK38ua6ecvr37aj9pj9nxjnxgr2 foreign key (poll_id) references polls
+Hibernate: alter table if exists polls add constraint FKs2iay0nvudl3tl0a33ji0pxyn foreign key (created_by) references users
+Hibernate: alter table if exists votes add constraint FKegm12kr5toym1nt7ndgr9isw9 foreign key (option_id) references options
+Hibernate: alter table if exists votes add constraint FK7trt3uyihr4g13hva9d31puxg foreign key (poll_id) references polls
+Hibernate: alter table if exists votes add constraint FKli4uj3ic2vypf5pialchj925e foreign key (user_id) references users
+2026-02-22T13:58:56.634+05:30  INFO 5677 --- [PollingSystem] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-22T13:58:56.762+05:30  INFO 5677 --- [PollingSystem] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-22T13:58:56.762+05:30  WARN 5677 --- [PollingSystem] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-22T13:58:56.877+05:30  WARN 5677 --- [PollingSystem] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-22T13:58:57.029+05:30  INFO 5677 --- [PollingSystem] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:polling_db'
+2026-02-22T13:58:57.049+05:30  INFO 5677 --- [PollingSystem] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2026-02-22T13:58:57.049+05:30  INFO 5677 --- [PollingSystem] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1e3c4c12]]
+2026-02-22T13:58:57.050+05:30  INFO 5677 --- [PollingSystem] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2026-02-22T13:58:57.056+05:30  INFO 5677 --- [PollingSystem] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-22T13:58:57.059+05:30  INFO 5677 --- [PollingSystem] [           main] c.p.backend.PollingSystemApplication     : Started PollingSystemApplication in 1.401 seconds (process running for 1.489)
+2026-02-22T13:59:57.056+05:30  INFO 5677 --- [PollingSystem] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:14 min
+[INFO] Finished at: 2026-02-22T14:03:09+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.3:run (default-cli) on project backend: Process terminated with exit code: 137 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
