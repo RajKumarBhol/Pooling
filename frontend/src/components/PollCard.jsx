@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+const formatTimeLeft = (expiryDate) => {
+    const now = new Date();
+    const expiry = new Date(expiryDate);
+    const diff = expiry - now;
+    if (diff <= 0) return null;
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    if (hours > 48) return `Closes ${expiry.toLocaleDateString()}`;
+    if (hours > 0) return `Closes in ${hours}h ${minutes}m`;
+    return `Closes in ${minutes}m`;
+};
 
 const PollCard = ({ poll, votedOption }) => {
     const isClosed = poll.status === 'CLOSED';
     const totalVotes = poll.options?.reduce((sum, opt) => sum + opt.voteCount, 0) || 0;
+
+    // Refresh countdown every minute
+    const [, setTick] = useState(0);
+    useEffect(() => {
+        if (!isClosed && poll.expiryDate) {
+            const interval = setInterval(() => setTick(t => t + 1), 60000);
+            return () => clearInterval(interval);
+        }
+    }, [isClosed, poll.expiryDate]);
+
+    const timeLeft = !isClosed && poll.expiryDate ? formatTimeLeft(poll.expiryDate) : null;
 
     return (
         <Link
@@ -12,13 +35,25 @@ const PollCard = ({ poll, votedOption }) => {
         >
             <div className="flex justify-between items-start mb-6">
                 <div className="flex flex-col space-y-2">
-                    <span className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase text-center w-max ${isClosed ? 'bg-red-500/10 text-red-400 border border-red-500/20' : 'bg-green-500/10 text-green-400 border border-green-500/20'
+                    <span className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase text-center w-max ${isClosed
+                            ? 'bg-red-500/10 text-red-400 border border-red-500/20'
+                            : 'bg-green-500/10 text-green-400 border border-green-500/20'
                         }`}>
                         {isClosed ? 'Closed' : 'Active'}
                     </span>
+
                     {votedOption && (
                         <span className="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase text-center w-max bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
                             Voted: {votedOption}
+                        </span>
+                    )}
+
+                    {timeLeft && (
+                        <span className="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase w-max bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center gap-1">
+                            <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            {timeLeft}
                         </span>
                     )}
                 </div>

@@ -7,6 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -15,4 +16,8 @@ public interface PollRepository extends JpaRepository<Poll, Long> {
 
     // For pagination and search
     Page<Poll> findByTitleContainingIgnoreCase(String title, Pageable pageable);
+
+    // For scheduled auto-expiration
+    List<Poll> findByStatusAndExpiryDateBefore(com.polling.backend.entity.PollStatus status,
+            java.time.LocalDateTime date);
 }
